@@ -7,3 +7,10 @@
     }
 </script>
 ```
+```bash
+function xss($input) 
+{
+    return mysqli_real_escape_string($DB,stripslashes(strip_tags(htmlspecialchars($input,ENT_QUOTES))));
+
+}
+```
